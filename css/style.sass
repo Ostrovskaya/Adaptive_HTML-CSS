@@ -1,0 +1,509 @@
+@import 'define'
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box 
+body 
+    position: relative
+
+html
+    font-family: 'Open Sans', sans-serif   
+
+h1
+    font-weight: 800
+
+h2
+    font-weight: 700
+    font-size: 28px
+    line-height: 34px
+    margin-bottom: 10px
+    text-transform: uppercase
+
+h3
+    font-weight: 700
+    font-size: 24px
+    line-height: 29px
+    letter-spacing: -1px
+
+h4,
+.button
+    font-weight: 600
+
+p
+    font-weight: 400
+
+a,
+a:hover
+    text-decoration: none
+    color: inherit
+
+li
+    list-style-type: none
+
+input
+    border: none
+
+summary::-webkit-details-marker 
+    display: none
+
+hr
+    border-top: 1px solid $color_hr 
+    margin: 18px 0
+
+
+
+.padding_page
+    padding: 21px
+
+.background
+    left: 0
+    top: 0
+    background: rgba(0, 0, 0, 0.2) 
+    backdrop-filter: blur(15px)
+    min-width: 100%
+    min-height: 100%
+    position: absolute
+    z-index: 1
+    display: none
+
+.header 
+    width: 100%
+    &_top   
+        @extend .flex_left_right 
+        padding-top: 38px
+        min-height: 288px
+        background-image: url(../img/header.png) 
+        background-repeat: no-repeat
+        background-position: right -58px top -11px
+        background-size: cover
+
+    &__bars
+        color: $color_white
+        font-size: 40px
+        transition: color 0.5s
+        &:hover
+            color: $color_button_active
+        
+
+    &__logo
+        width: 100px
+        height: 29px
+
+    &__title
+        font-size: 32px
+        line-height: 38px
+    &__text
+        margin-bottom: 17px
+
+
+.button
+    display: block
+    background: $color_button
+    border-radius: 30px
+    width: 100%
+    height: 48px
+    font-size: 16px
+    line-height: 48px
+    text-align: right
+    text-transform: uppercase
+    padding: 0 25px
+    color: $color_white
+
+    &:hover
+        box-shadow: 0px 4px 15px $color_button_shadow 
+        color: $color_white 
+
+    &:active
+        background: $color_button_active  
+
+.call
+    &__title
+       font-size: 18px
+       color: $color_black
+       margin-bottom: 13px
+
+    &__text
+        font-size: 14px
+        line-height: 13px 
+
+    &__input
+        padding: 0 23px
+        border: 1px solid $color_input
+        border-radius: 30px
+        height: 40px
+        width: 100%
+        font-size: 14px
+        color: $color_input
+        margin-bottom: 10px
+
+        &::placeholder
+            color: inherit     
+
+    &__button
+        height: 40px
+        line-height: 40px
+        text-align: center
+        margin-bottom: 12px
+
+    &__label
+        font-size: 10px
+        padding-left: 10px
+        @extend .flex_vert_center
+        color: $color_input_label
+        margin-bottom: 10px
+
+    &__checkbox
+        margin-right: 10px
+        width: 9.61px
+        height: 10px
+        border: 1px solid $color_input_label
+    
+    &_blue
+        background-color: $color_button
+        padding-top: 30px
+        padding-bottom: 7px 
+        & > *
+            color: $color_white
+        
+        & > h2
+            line-height: 34px
+            text-transform: uppercase
+        & > p
+            margin-bottom: 14px 
+            line-height: 16px
+        & > .call__input
+            border-color: $color_white
+            background: $color_button
+
+        & > .button
+            background-color: $color_buttonY
+            color: $color_black
+            text-align: right
+            &:hover
+                box-shadow: 0px 4px 20px $color_buttonY_shadow 
+                color: $color_black
+
+            &:active
+                background: $color_buttonY_active   
+
+.menu
+    background-color: $color_white
+    width: 100%
+    position: absolute
+    z-index: 10
+    left: 0
+    top: 0
+    padding: 13px 21px 28px 21px
+    display: none
+
+    &__top
+        @extend .flex_left_right
+
+    &__close
+        font-size: 45px
+        color: $color_input
+        &:hover
+            color: $color_button
+
+    ul
+        margin: 10px 0
+
+    &__link
+        display: inline-block
+        color: $color_black 
+        font-size: 18px
+        line-height: 22px 
+        padding: 10px 0
+    
+    &__list
+        &:hover
+            background-color: $color_hover
+
+    &__network
+        margin-top: 24px
+
+.network
+    @extend .flex_left_right
+
+    &__item
+        width: 36px
+        height: 36px
+        border-radius: 50%
+        background-color: $color_button
+        @extend .flex_center
+        color: $color_white
+        font-size: 20px
+        transition: transform 0.5s
+        &:hover
+            transform: scale(1.3)
+            color: $color_white
+
+.aboutUs
+    background-color: $color_background
+    width: 100%
+
+    &__title
+        font-size: 18px 
+        margin-bottom: 10px
+    &__text
+        font-size: 12px
+        line-height: 14px  
+        margin-bottom: 12px
+
+.company
+    margin: 0 auto
+    width: 278px
+    position: relative
+    @extend .flex_center
+    margin-bottom: 54px
+    &__background 
+        width: 100%
+
+    &__logo
+       position: absolute 
+       transition: transform 1s
+       &:hover
+          transform: scale(1.3) 
+    &__pic
+        position: absolute
+        top: 30px
+    &__logo1     
+        left: 6px
+        top: 37px
+        width: 45.07px
+        height: 28.64px
+    &__logo2
+        left: 14px
+        bottom: 11px 
+        width: 46.33px
+        height: 30.33px
+    &__logo3
+        left: 58px
+        top: 23px
+        width: 34.54px
+        height: 21.9px
+    &__logo4
+        left: 55px
+        bottom: 35px 
+        width: 37.07px
+        height: 23.59px
+    &__logo5
+        top: 14px
+        right: 67px
+        width: 34.54px
+        height: 21.9px
+    &__logo6
+        top: 34px
+        right: 13px 
+        width: 37.07px
+        height: 23.59px
+    &__logo7
+        bottom: 41px  
+        right: 58px 
+        width: 29.48px
+        height: 18.95px
+    &__logo8
+        bottom: 17px  
+        right: 15px
+        width: 37.07px
+        height: 23.59px
+
+.step
+    &__img
+        width: 100%  
+        margin-bottom: 20px
+    &__title
+        font-size: 26px
+        margin-bottom: 10px
+    &__text
+        font-size: 14px
+        line-height: 17px
+        margin-bottom: 30px
+
+.send
+    background-color: $color_background
+
+    &__title
+        margin-bottom: 12px
+        font-size: 24px
+        line-height: 29px
+            
+.reviews
+    &_block
+        @extend .flex_left_right 
+        align-items: center   
+
+.block__arrow
+    &:first-child
+        padding-right: 12px
+    &:last-child
+        padding-left: 12px
+    &:hover
+        color: $color_button
+
+.feedback
+    display: none
+    &__avatar
+        width: 100px
+        height: 100px
+        float: left
+        margin-right: 20px
+        margin-bottom: 12px
+    &__name
+        font-size: 26px
+        line-height: 26px
+        margin-top: -5px
+        margin-bottom: 5px
+    &__company
+        font-size: 18px
+    &__package,
+        font-size: 10px
+        padding-top: 2px
+    &__text
+        font-size: 12px
+        line-height: 14px
+        clear: both
+        
+.benefits 
+    padding-bottom: 1px
+    background-color: $color_background
+    &_block
+        @extend .flex_table
+
+
+$advantage_width: 86px  
+.advantage
+    width: $advantage_width
+    margin-bottom: 21px
+    flex-basis: 30%
+    padding: 0 calc( 15% - 43px)
+
+    &__text
+        text-align: center
+        font-size: 10px
+        line-height: 12px
+    &__background
+       background-color: $color_white
+       width: $advantage_width
+       height: $advantage_width
+       border-radius: 50%
+       @extend .flex_center
+       margin-bottom: 9px
+    &__img
+        transform: scale(0.6)
+
+.assurances
+    @extend .flex_left_right
+    & > .block__arrow
+        padding-top: 25px 
+        padding-bottom: 25px 
+
+
+.warranty
+    display: none
+    &_block
+       display: flex
+       align-items: center
+
+    &__background
+        width: 62px
+        height: 62px
+        border-radius: 50%
+        background-color: $color_background 
+        @extend .flex_center
+        margin-right: 10px 
+    &__img
+       transform: scale(0.4)        
+    &__title
+        font-size: 16px
+        line-height: 19px
+    &__text
+        font-size: 12px
+        line-height: 14px
+        margin: 14px 0
+
+.faq
+    background-color: $color_faq
+
+.question
+    position: relative 
+    margin-bottom: 10px
+    &__text
+        font-size: 14px
+        line-height: 17px
+    &_summary
+        position: relative
+        padding: 22px 48px 22px 22px
+        border-radius: 32px
+        background-color: $color-white
+        @extend .flex_vert_center
+        &::after  
+            font-family: 'FontAwesome'
+            content: '\f078'
+            color: $color_button
+            position: absolute
+            right: 25px
+
+    &[open] > &_summary::after 
+        font-family: 'FontAwesome'
+        content: '\f077'  
+    &[open] > &_summary
+        border-radius: 32px 32px 0px 0px
+    &__hidden
+        background-color: $color_background
+        border-radius: 0px 0px 32px 32px
+        padding: 22px
+
+.footer  
+    background-color: $color_footer  
+    & .call__input
+       background-color: $color_footer 
+       
+    &_middle
+        @extend .flex_left_right
+    &__bars
+        font-size: 45px
+        color: $color_input 
+        &:hover
+            color: $color_button
+
+.parters
+    @extend .flex_left_right 
+    align-items: center 
+
+    &_block
+        @extend .flex_table   
+    &__item
+        width: 66px
+        height: 41px 
+        flex-basis: 30%      
+        display: none
+        @extend .flex_center
+        padding: 5px
+        margin-bottom: 6px 
+        transition: transform 0.5s
+        &:hover
+            transform: scale(1.3)
+        
+    &__logo
+        width: 100%
+
+.copyright
+    @extend .flex_left_right  
+    &__text   
+       font-size: 10px 
+       font-weight: 300
+       letter-spacing: -0.5px
+
+
+    
+
+
+
+
+
+    
+        
+
+.visible
+    display: block

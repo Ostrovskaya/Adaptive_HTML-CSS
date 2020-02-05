@@ -1,0 +1,37 @@
+$color_white: rgba(255, 255, 255, 1)
+$color_black: rgba(0, 0, 0, 1)
+$color_button: rgba(0, 141, 205, 1)
+$color_button_shadow: rgba(27, 170, 235, 0.45)
+$color_button_active: rgba(148, 209, 236, 1)
+$color_buttonY: rgba(255, 204, 0, 1)
+$color_buttonY_shadow: rgba(255, 204, 0, 0.55)
+$color_buttonY_active: rgba(252, 227, 156, 1)
+$color_input: rgba(54, 54, 54, 1)
+$color_input_label: rgba(158, 158, 158, 1)
+$color_hover: rgba(225,225,225,1)
+$color_background: rgba(247, 247, 247, 1)
+$color_faq: rgba(210, 236, 247, 1)
+$color_footer: rgba(233, 233, 233, 1)
+$color_hr: rgba(196, 196, 196, 1)
+.flex
+    &_left_right 
+        justify-content: space-between
+        display: flex
+
+    &_vert_center 
+        display: flex
+        align-items: center
+
+    &_center 
+        justify-content: center
+        @extend .flex_vert_center
+
+    &_table
+        justify-content: space-between
+        display: flex
+        flex-wrap: wrap
+
+    &_around
+        display: flex
+        justify-content: space-around
+
