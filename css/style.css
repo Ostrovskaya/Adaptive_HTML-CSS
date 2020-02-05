@@ -386,6 +386,8 @@ hr {
 }
 
 .company__pic {
+  left: 101px;
+  top: 30px;
   position: absolute;
   top: 30px;
 }
