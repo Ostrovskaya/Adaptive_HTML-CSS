@@ -38,63 +38,74 @@
 
 </head>
 <body>
-    <div id = "background" class="background"></div>
-    <div id="menu" class="menu">
-        <div class="menu__top">
-            <a href="index.html"><img src="img/logo.png" alt="logo" class="menu__logo"></a>
-            <i class="menu__close fas fa-times" onclick="close_menu('menu');"></i>
-        </div>
-        <ul>
-            <li class="menu__list"><a href="#" class="menu__link">Главная</a></li>
-            <li class="menu__list"><a href="#" class="menu__link">Описание</a></li>
-            <li class="menu__list"><a href="#" class="menu__link">Преимущества</a></li>
-            <li class="menu__list"><a href="#" class="menu__link">Отзывы</a></li>
-            <li class="menu__list"><a href="#" class="menu__link">Партнёры</a></li>
-            <li class="menu__list"><a href="#" class="menu__link">Гарантии</a></li>
-            <li class="menu__list"><a href="#" class="menu__link">FAQ</a></li>
-        </ul>       
-        <form action="#" class="call ">  
-            <h4 class="call__title">ОСТАЛИСЬ ВОПРОСЫ?</h4>
+    <div id = "background" class="background"></div> 
+    <div id="request" class="request">
+        <div  class="request__block">
+            <p class="request__close"><i class="fas fa-times" onclick="close_menu('request')"></i></p>
+            <p id="request-top" class="request__title">Оставьте заявку, и мы Вам перезвоним!</p>
+            <input type="text" placeholder="Ваше имя" required class="call__input">
             <input type="phone" placeholder="Ваш телефон" required class="call__input">
             <input type="submit" class="call__button button" value="заказать звонок">
-            <label class="call__label"><input type="checkbox" class="call__checkbox" required>Я согласен на обработку персональных данных</label>
-        </form>
-        <div class="menu__network network">
-            <a href="#" class="network__item"><i class="fab fa-vk"></i></a>
-            <a href="#" class="network__item"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="network__item"><i class="fab fa-facebook-f"></i></a>
         </div>
     </div>
-   
     <header class="header">
-        <div class="header_top padding_page">
+        <div class="header__top center">
             <a href="index.html"><img src="img/logo_white.png" alt="logo" class="header__logo"></a>
-            <i class="header__bars fas fa-bars" onclick="show_menu('menu');"></i>        
+            <input type="checkbox" id="checkbox" class="menu__checkbox">
+            <label for="checkbox" onclick="show_menu(background)"><i class="header__bars fas fa-bars"></i></label> 
+            <div id="menu" class="menu">
+                <div class="menu__top">
+                    <a href="index.html"><img src="img/logo.png" alt="logo" class="menu__logo"></a>
+                    <label for="checkbox" onclick="close_menu(background)"><i class="menu__close fas fa-times"></i></label>
+                </div>
+                <ul class="menu__nav">
+                    <li class="menu__list"><a href="#" class="menu__link">Главная</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Описание</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Преимущества</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Отзывы</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Партнёры</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">Гарантии</a></li>
+                    <li class="menu__list"><a href="#" class="menu__link">FAQ</a></li>
+                </ul>       
+                <form action="#" class="menu__call call ">  
+                    <h4 class="call__title">ОСТАЛИСЬ ВОПРОСЫ?</h4>
+                    <input type="phone" placeholder="Ваш телефон" required class="call__input">
+                    <input type="submit" class="call__button button" value="заказать звонок">
+                    <label class="call__label"><input type="checkbox" class="call__checkbox" required>Я согласен на обработку персональных данных</label>
+                </form>
+                <div class="menu__network network">
+                    <a href="#" class="network__item"><i class="fab fa-vk"></i></a>
+                    <a href="#" class="network__item"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="network__item"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>       
         </div>
-        <div class="header_content padding_page">
+        <div class="header__content">
             <h1 class="header__title">ПРИДУМАЙТЕ ЧТО ОТПРАВИТЬ</h1>
             <h3 class="header__text">А посылка доедет сама</h3>
             <a href="#" class="header__button button">отправить посылку</a>
         </div>    
     </header>
-    <section class="aboutUs padding_page">
-        <div class="company">
-            <a href="#"><img class="company__background" src="img/background.png" alt=""></a>
-            <a href="#"><img src="img/main_pic.png" alt="pic" class="company__pic"></a>
-            <a href="#"><img src="img/dpd.png" alt="logo" class="company__logo company__logo1"></a>
-            <a href="#"><img src="img/pony.png" alt="logo" class="company__logo company__logo2"></a>
-            <a href="#"><img src="img/bringo.png" alt="logo" class="company__logo company__logo3"></a>
-            <a href="#"><img src="img/cdek.png" alt="logo" class="company__logo company__logo4"></a>
-            <a href="#"><img src="img/tnt.png" alt="logo" class="company__logo company__logo5"></a>
-            <a href="#"><img src="img/city_express.png" alt="logo" class="company__logo company__logo6"></a>
-            <a href="#"><img src="img/ups.png" alt="logo" class="company__logo company__logo7"></a>
-            <a href="#"><img src="img/spsr.png" alt="logo" class="company__logo company__logo8"></a>
+    <section class="aboutUs center">
+        <div class="aboutUs__company company">
+            <img class="company__background" src="img/background.png" alt="">
+            <img src="img/main_pic.png" alt="pic" class="company__pic">
+            <img src="img/dpd.png" alt="logo" class="company__logo company__logo1">
+            <img src="img/pony.png" alt="logo" class="company__logo company__logo2">
+            <img src="img/bringo.png" alt="logo" class="company__logo company__logo3">
+            <img src="img/cdek.png" alt="logo" class="company__logo company__logo4">
+            <img src="img/tnt.png" alt="logo" class="company__logo company__logo5">
+            <img src="img/city_express.png" alt="logo" class="company__logo company__logo6">
+            <img src="img/ups.png" alt="logo" class="company__logo company__logo7">
+            <img src="img/spsr.png" alt="logo" class="company__logo company__logo8">
         </div>
-        <h3 class="aboutUs__title">Мы – агрегатор служб доставки</h3>
-        <p class="aboutUs__text">С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши услуги бесплатны, так как мы получаем бонусы от служб доставок за предоставленный объем заказов, а вы получаете надежный сервис в подарок!</p>
-        <a href="#" class="header__button button">отправить посылку</a>
+        <div class="aboutUs__content">
+            <h3 class="aboutUs__title">Мы – агрегатор служб доставки</h3>
+            <p class="aboutUs__text">С нами удобно вам, вашим клиентам и курьерским службам. Для вас наши услуги бесплатны, так как мы получаем бонусы от служб доставок за предоставленный объем заказов, а вы получаете надежный сервис в подарок!</p>
+            <a href="#" class="aboutUs__button button">отправить посылку</a>
+        </div>
     </section>
-    <section class="instruction padding_page">
+    <section class="instruction center">
         <div class="step">
             <img src="img/step1.png" alt="pic" class="step__img">
             <h4 class="step__title">Шаг 1</h4>
@@ -116,20 +127,24 @@
             <p class="step__text">Вы ждёте подтверждения доставки, слова радости и благодарности от адресата :)</p>
         </div>
     </section>
-    <article class="send padding_page">
+    <article class="send center">
         <h3 class="send__title">Мы берём все заботы по доставке на себя!</h3>
-        <a href="#" class="header__button button">отправить посылку</a>
+        <a href="#" class="send__button button">отправить посылку</a>
     </article>
-    <form action="#" class="call call_blue padding_page">  
-        <h2>хотите мы вам перезвоним?</h2>
-        <p class="call__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
-        <input type="phone" placeholder="Ваш телефон" required class="call__input">
-        <input type="submit" class="call__button button" value="заказать звонок">
-        <label class="call__label"><input type="checkbox" class="call__checkbox" required>Я согласен на обработку персональных данных</label>
+    <form action="#" class="call call_blue center">  
+        <div class="call__left">
+            <h2>хотите мы вам перезвоним?</h2>
+            <p class="call__text">Закажите звонок, и менеджер вам всё расскажет и объяснит</p>
+        </div>
+        <div class="call__right">
+            <input type="phone" placeholder="Ваш телефон" required class="call__input">
+            <input type="submit" class="call__button button" value="заказать звонок" onclick="show_menu('request')">
+            <label class="call__label"><input type="checkbox" class="call__checkbox" required>Я согласен на обработку персональных данных</label>
+        </div>
     </form>
-    <section class="reviews padding_page">
+    <section class="reviews center">
         <h2 class="reviews__title">ОТЗЫВЫ</h2>
-        <div class="reviews_block">
+        <div class="reviews__block">
             <i class="block__arrow fas fa-chevron-left" onclick="block_active('feedback')"></i>
             <article class="feedback visible one">
                 <img class="feedback__avatar" src="img/avatar1.png" alt="avatar">
@@ -152,9 +167,9 @@
             <i class="block__arrow fas fa-chevron-right"  onclick="block_active('feedback')"></i>
         </div>
     </section>
-    <section class="benefits padding_page">
+    <section class="benefits center">
         <h2 class="benefits__title">НАШИ ПРЕИМУЩЕСТВА</h2> 
-        <div class="benefits_block">
+        <div class="benefits__block">
             <div class="advantage">
                 <div class="advantage__background">
                     <img src="img/advantage1.png" alt="pic" class="advantage__img">
@@ -195,8 +210,8 @@
         
 
     </section>
-    <section class="assurances padding_page">
-        <i class="block__arrow fas fa-chevron-left" onclick="block_active('warranty')"></i>
+    <section class="assurances center">
+        <i class="assurances__arrow block__arrow fas fa-chevron-left" onclick="block_active('warranty')"></i>
         <article class="warranty visible one">
             <div class="warranty_block">
                 <div class="warranty__background"><img src="img/warranty1.png" alt="" class="warranty__img"></div>
@@ -221,50 +236,56 @@
             <p class="warranty__text">Мы работаем с самыми надежными и известными операторами доставки. Проверка надежности курьерской компании, экспертная оценка качества предоставляемых услуг</p>
             <input type="submit" class="warranty__button button" value="подробнее ">
         </article>
-        <i class="block__arrow fas fa-chevron-right"  onclick="block_active('warranty')"></i>
+        <i class="assurances__arrow block__arrow fas fa-chevron-right"  onclick="block_active('warranty')"></i>
     </section>
-    <section class="faq padding_page">
+    <section class="faq center">
         <h2 class="faq__title">ОСТАЛИСЬ СОМНЕНИЯ?</h2>
-        <details class="question">
-            <summary  class="question_summary question__text">На бумажную волокиту уйдёт много времени, а мне нужно быстро</summary> 
-            <div class="question__hidden">
-                <p class="question__text">Это не так :)</p>
+        <div class="faq__question">
+            <div class="faq__part">
+                <details class="question">
+                    <summary  class="question_summary question__text">На бумажную волокиту уйдёт много времени, а мне нужно быстро</summary> 
+                    <div class="question__hidden">
+                        <p class="question__text">Это не так :)</p>
+                    </div>
+                </details>
+                <details class="question">
+                    <summary  class="question_summary question__text">Мне необходимо совершить доставку по нескольким адресам, нужно много чего заполнять</summary> 
+                    <div class="question__hidden">
+                        <p class="question__text">Это не так :)</p>
+                    </div>
+                </details>
+                <details class="question">
+                    <summary  class="question_summary question__text">Вы не сможете доставить посылку за границу</summary> 
+                    <div class="question__hidden">
+                        <p class="question__text">Это не так :)</p>
+                    </div>
+                </details>
             </div>
-        </details>
-        <details class="question">
-            <summary  class="question_summary question__text">Мне необходимо совершить доставку по нескольким адресам, нужно много чего заполнять</summary> 
-            <div class="question__hidden">
-                <p class="question__text">Это не так :)</p>
+            <div class="faq__part">
+                <details class="question">
+                    <summary  class="question_summary question__text">Вы не занимаетесь такими простыми грузами, как мебель</summary> 
+                    <div class="question__hidden">
+                        <p class="question__text">Это не так :)</p>
+                    </div>
+                </details>
+                <details class="question">
+                    <summary  class="question_summary question__text">Я отправляю вместе с коллегами, мы можем легко запутаться где чьё</summary> 
+                    <div class="question__hidden">
+                        <p class="question__text">Это не так :)</p>
+                    </div>
+                </details>
+                <details class="question">
+                    <summary  class="question_summary question__text">Нужно заполнять кучу документов</summary> 
+                    <div class="question__hidden">
+                        <p class="question__text">Это не так :)</p>
+                    </div>
+                </details>
             </div>
-        </details>
-        <details class="question">
-            <summary  class="question_summary question__text">Вы не сможете доставить посылку за границу</summary> 
-            <div class="question__hidden">
-                <p class="question__text">Это не так :)</p>
-            </div>
-        </details>
-        <details class="question">
-            <summary  class="question_summary question__text">Вы не занимаетесь такими простыми грузами, как мебель</summary> 
-            <div class="question__hidden">
-                <p class="question__text">Это не так :)</p>
-            </div>
-        </details>
-        <details class="question">
-            <summary  class="question_summary question__text">Я отправляю вместе с коллегами, мы можем легко запутаться где чьё</summary> 
-            <div class="question__hidden">
-                <p class="question__text">Это не так :)</p>
-            </div>
-        </details>
-        <details class="question">
-            <summary  class="question_summary question__text">Нужно заполнять кучу документов</summary> 
-            <div class="question__hidden">
-                <p class="question__text">Это не так :)</p>
-            </div>
-        </details>
+        </div>
 
 
     </section>
-    <section class="parters  padding_page">
+    <section class="parters  center">
         <i class="block__arrow fas fa-chevron-left"></i>
         <div class="parters_block">
            <a class="parters__item visible one"><img class="parters__logo" src="img/bringo.png" alt="bringo"></a> 
@@ -279,21 +300,38 @@
         <i class="block__arrow fas fa-chevron-right"></i>
     </section>
 
-    <footer class="footer padding_page">
-        <form action="#" class="call">  
-            <h4 class="call__title">ОСТАЛИСЬ ВОПРОСЫ?</h4>
-            <input type="phone" placeholder="Ваш телефон" required class="call__input">
-            <input type="submit" class="call__button button" value="заказать звонок">
+    <footer class="footer center">
+        <form action="#" class="call footer__call">  
+            <div class="call__top">
+                <h4 class="call__title call__title_footer">ОСТАЛИСЬ ВОПРОСЫ?</h4>
+                <input type="phone" placeholder="Ваш телефон" class="call__input" required>
+                <input type="submit" class="call__button button" value="заказать звонок" onclick="show_menu('request')">
+            </div>
             <label class="call__label"><input type="checkbox" class="call__checkbox" required>Я согласен на обработку персональных данных</label>
         </form>
         <hr>
         <div class="footer_middle">
             <a href="index.html"><img src="img/logo.png" alt="" class="footer__logo"></a>
-            <a href="#menu"> <i class="footer__bars fas fa-bars" onclick="show_menu('menu');"></i></a>
+            <input type="checkbox" id="checkbox" class="menu__checkbox">
+            <label for="checkbox" onclick="show_menu(background)"><i class="footer__bars fas fa-bars"></i></label> 
+            <ul class="menu__nav footer__menu">
+                <li class="menu__list"><a href="#" class="menu__link">Главная</a></li>
+                <li class="menu__list"><a href="#" class="menu__link">Описание</a></li>
+                <li class="menu__list"><a href="#" class="menu__link">Преимущества</a></li>
+                <li class="menu__list"><a href="#" class="menu__link">Отзывы</a></li>
+                <li class="menu__list"><a href="#" class="menu__link">Партнёры</a></li>
+                <li class="menu__list"><a href="#" class="menu__link">Гарантии</a></li>
+                <li class="menu__list"><a href="#" class="menu__link">FAQ</a></li>
+            </ul>       
         </div>
         <hr>
         <div class="copyright">
             <p class="copyright__text">© Сами копипастим и вам разрешаем</p>
+            <div class="network footer__network">
+                <a href="#" class="network__item"><i class="fab fa-vk"></i></a>
+                <a href="#" class="network__item"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="network__item"><i class="fab fa-facebook-f"></i></a>
+            </div>
             <p class="copyright__text">2020</p>
             <p class="copyright__text">Задизайнено мной</p>
         </div>
