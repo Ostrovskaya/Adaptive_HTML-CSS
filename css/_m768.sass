@@ -1,0 +1,274 @@
+@media (min-width: 720px)
+    .header
+        &__top 
+            background-position: right -27px top
+
+@media (max-width: 1439px) and (min-width: 768px)
+    .company
+        margin: 0 auto
+        width: 398px   
+        margin-bottom: 54px
+            
+        &__pic
+            left: 144px
+            top: 42px
+            position: absolute
+            width: 120.61px
+            height: 160.41px
+        &__logo1     
+            left: 8px
+            top: 53px
+            width: 64.52px
+            height: 41.01px
+        &__logo2
+            left: 20px
+            bottom: 16px 
+            width: 66.33px
+            height: 43.42px
+        &__logo3
+            left: 84px
+            top: 32px
+            width: 49.45px
+            height: 31.36px
+        &__logo4
+            left: 79px
+            bottom: 50px 
+            width: 53.07px
+            height: 33.77px
+        &__logo5
+            top: 20px
+            right: 100px
+            width: 49.45px
+            height: 31.36px
+        &__logo6
+            top: 48px
+            right: 19px 
+            width: 53.07px
+            height: 33.77px
+        &__logo7
+            bottom: 58px  
+            right: 82px 
+            width: 42.21px
+            height: 27.14px
+        &__logo8
+            bottom: 24px  
+            right: 21px
+            width: 53.07px
+            height: 33.77px 
+
+
+@media (min-width: 768px)
+    h3
+        font-size: 28px
+        line-height: 34px
+    h1
+        font-size: 44px
+    h2
+        font-size: 36px
+        line-height: 34px
+        margin-bottom: 16px
+    .center
+        padding: 25px calc(50% - 350px)
+
+    .header
+        &__top
+            min-height: 415px
+            background-position: right -58px top
+        &__bars
+            display: none!important
+        &__content
+            position: absolute
+            top: 85px
+            width: 60vw
+            color: $color_white
+            padding-left: calc(50% - 350px)
+        &__title     
+            line-height: 53px
+            margin-bottom: 20px
+        &__text
+            margin-bottom: 30px
+
+    .menu
+        display: block
+        &__top,
+        &__call,
+        &__network
+            display: none!important
+        &__nav
+            display: flex
+            margin: 0
+        &__link
+            color: $color_white
+            padding: 5px 12px
+            font-size: 14px 
+            &:hover
+                color: $color_white 
+                text-shadow: 0px 0px 2px $color_white 
+
+    .aboutUs
+        width: 100%
+        display: flex
+        flex-direction: row-reverse
+        position: relative
+        
+        &__company
+            position: absolute
+            margin-top: 50px
+
+        &__title
+            margin-top: 0
+            font-size: 36px
+            margin-bottom: 17px
+        &__text
+            width: 37%
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 25px
+        &__button
+            margin-bottom: 35px
+
+    .instruction
+        justify-content: space-between
+        display: flex
+        flex-wrap: wrap
+        &__text
+            font-size: 16px
+            line-height: 19px
+
+    .step
+        width: 50%
+        padding: 0 39px 
+
+    .send
+        display: flex  
+        align-items: center
+        justify-content: space-between
+        &__title
+           width: 380px 
+
+    .call
+        justify-content: space-between
+        display: flex
+
+        &__left
+            width: 330px 
+            & > h2
+                font-size: 28px
+        &__text
+            font-size: 14px
+            line-height: 13px
+
+        &__top
+            width: 100%
+            justify-content: space-between
+            display: flex
+            align-items: center
+            & > *
+                width: 220px   
+            & > h4
+                font-size: 19px    
+
+    .feedback
+        display: block
+        padding: 10px 10px
+        &__text
+            font-size: 14px
+            line-height: 17px
+
+    .benefits
+        &__title
+            margin-bottom: 25px 
+
+    .advantage
+        width: 100px
+        &__text
+            font-size: 12px
+            line-height: 14px 
+        &__background
+            width: 100px
+            height: 100px  
+            margin-bottom: 15px  
+        &__img
+            transform: scale(0.7)  
+
+    .assurances 
+        display: flex
+        justify-content: space-between
+        &__arrow
+            padding: 0!important
+            &::before     
+                display: none
+
+    .warranty
+        display: block  
+        width: 220px
+        &__background 
+            width: 100px
+            height: 100px
+        &__img
+            transform: scale(0.7) 
+        &__title
+            font-size: 18px
+            letter-spacing: -0.5px
+            margin-top: 15px
+        &__button
+            width: 220px
+        
+    .question
+        &__text
+            font-size: 16px
+            line-height: 19px
+        &_summary
+            min-height: 48px
+
+    .parters
+    
+    .block__arrow
+        &:first-child
+            padding-right: 30px
+        &:last-child
+            padding-left: 30px
+
+    .footer
+        &__logo
+            width: 100px
+        &__call
+            display: block
+            & .call__label
+                display: flex
+                justify-content: center
+        &__bars
+            display: none!important
+        &__menu
+            & .menu__link
+                color: $color_black
+                &:hover
+                    text-shadow: 0px 0px 1px $color_black
+                    
+        &__network
+            width: 80px
+
+
+    .network
+        &__item
+            width: 16px
+            height: 16px
+            font-size: 10px
+        
+    .copyright
+        &__text
+            font-size: 12px
+            letter-spacing: 1px
+
+    .request
+        top: calc( 50%  - 168px )
+        left: calc( 50% - 220px )
+        &__block
+            width: 440px
+
+            & > .call__input
+                width: 360px
+            & > .call__button
+                width: 360px
+            
+    
